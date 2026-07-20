@@ -9,3 +9,4 @@ function greet(user: User | null)  {
 
 console.log(greet({ name: "Rahul" }));
 console.log(greet(null));
+
