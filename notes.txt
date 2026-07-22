@@ -1,0 +1,52 @@
+----------------------------------------------------Flow of Typescript----------------------------------------------------
+
+
+            TypeScript Source Code (.ts / .tsx)
+                         │
+                         ▼
+                 1. Scanner (Lexer)
+                         │
+                         ▼
+                 2. Parser
+                         │
+                         ▼
+          3. Abstract Syntax Tree (AST)
+                         │
+                         ▼
+                 4. Binder
+                         │
+                         ▼
+             5. Type Checker
+                         │
+                         ▼
+              6. Transformer(s)
+                         │
+                         ▼
+                 7. Emitter
+                         │
+                         ▼
+              JavaScript (.js)
+                         │
+                         ├── Source Maps (.map)
+                         └── Declaration Files (.d.ts)
+
+1. Scanner (Lexer) : Also called lexical analysis, the scanner reads the source code and converts it into a stream of tokens. Each token represents a meaningful element of 
+    the code, such as keywords, identifiers, operators, and literals.
+
+2. Parser : The parser takes the stream of tokens produced by the scanner and organizes them into a hierarchical structure called an Abstract Syntax Tree (AST). The AST    
+    represents the syntactic structure of the code, capturing the relationships between different elements.
+
+3. Abstract Syntax Tree (AST) : The AST is a tree-like representation of the source code's structure. Each node in the tree corresponds to a construct in the 
+    programming language, such as expressions, statements, and declarations. The AST serves as an intermediate representation that can be further
+
+4. Binder : The binder traverses the AST and establishes the relationships between identifiers and their declarations. It resolves variable and function names, ensuring that 
+    references are correctly linked to their definitions.
+
+5. Type Checker : The type checker analyzes the AST to ensure that the code adheres to TypeScript's type system. It verifies that variables are used consistently with their
+    declared types, checks function signatures, and enforces type constraints. If any type errors are found, they are reported to the developer.
+
+6. Transformer(s) : The transformer(s) take the AST and apply various transformations to it, such as converting TypeScript-specific syntax into equivalent 
+    JavaScript constructs. This step may involve removing type annotations, transforming classes, and handling other TypeScript features that do not have direct equivalents in
+    JavaScript.
+
+7. Emitter : The emitter takes the transformed AST and generates the final JavaScript code.
