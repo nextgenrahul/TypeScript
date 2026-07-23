@@ -50,3 +50,23 @@
     JavaScript.
 
 7. Emitter : The emitter takes the transformed AST and generates the final JavaScript code.
+
+
+
+-----------------------------------------------------Differece between type inference and type annotation----------------------------------------------------------------------
+
+1. Type Inference : Type inference is a feature of TypeScript that allows the compiler to automatically determine the type of a variable or expression based on its value or usage. When you declare a variable without explicitly specifying its type, TypeScript analyzes the assigned value and infers the appropriate type for that variable.
+
+                       Inference = TypeScript guesses the type for you.
+    Example : 
+        let age = 25; // TypeScript infers the type of 'age' as number based on the assigned value.
+
+
+2. Type Annotation : Type annotation is a feature of TypeScript that allows developers to explicitly specify the type of a variable, function parameter, or return value. By providing type annotations, you can enforce stricter type checking and improve code clarity. Type annotations are written using a colon (:) followed by the desired type.
+
+                       Annotation = You tell TypeScript what the type is.
+
+    Example : 
+        let age: number = 25; // The type of 'age' is explicitly annotated as number.
+        
+        
